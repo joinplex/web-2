@@ -1,0 +1,142 @@
+body {
+  font-family: "Ubuntu";
+  font-style: normal;
+  overflow-x: hidden;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.head {
+  width: 100vw;
+  display: flex;
+  background-color: #c2cefc;
+  align-items: center;
+  justify-content: start;
+  height: 6vh;
+}
+.link-to-page {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 60px;
+  color: black;
+}
+.head-wrapper {
+  width: 60vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: space-between;
+}
+.d {
+  margin-left: 5ch;
+  width: 7vh;
+  height: 7vh;
+  background-color: #4c64ba;
+  border-radius: 50%;
+}
+.PSU {
+  background-color: #ffb44e;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.IKNT {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  margin-left: 5ch;
+  color: white;
+}
+.left_slidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9e7e7;
+  width: 50vh;
+  min-height: 80vh;
+}
+.v {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px;
+  background-color: #d9d9d9;
+}
+.danil {
+  margin-top: 5ch;
+  width: 80%;
+}
+.right_slidebar {
+  display: flex;
+  justify-content: right;
+}
+.za_Rossiy {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.z {
+  margin-left: 5ch;
+  margin-top: 5ch;
+  width: 50vw;
+}
+.q {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+.w {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+  margin-left: 5ch;
+  width: 90vh;
+}
+.aw {
+  display: flex;
+  justify-content: left;
+}
+.fotter {
+  width: 100vw;
+  height: 10vh;
+  background-color: #28376f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.txt {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: start;
+  margin-left: 5ch;
+}
+.vk {
+  width: 4vh;
+  height: 4vh;
+}
+.vk1 {
+  border-radius: 15%;
+  margin-right: 5ch;
+  background-color: white;
+  width: 4vh;
+  height: 4vh;
+}
