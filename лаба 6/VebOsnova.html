@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+   <link rel="stylesheet" type="text/css" href="Vebcss.css">
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <script type="text/javascript">
+    let inputs = 0;
+	var sum=0;
+    function addContact() {
+	  var name=document.getElementById("one");
+	  var price=document.getElementById("two");
+	  var quantity=document.getElementById("three");
+	  var price1=document.getElementById("two").value;
+	  var quantity1=document.getElementById("three").value;
+	  var q=quantity.value;
+	  var price2=parseInt(price1)
+	  var quantity2=parseInt(quantity1);
+	  if (quantity2!=quantity1){
+		q=quantity2;
+	  }
+	  var x1=price2*quantity2;
+	  var x=new Array(inputs);
+      let table = document.getElementById("zak");
+      let tr = document.createElement("TR");
+      let td1 = document.createElement("TD");
+      let td2 = document.createElement("TD");
+      let td3 = document.createElement("TD");
+	  let td4 = document.createElement("TD");
+	  let td5 = document.createElement("TD");
+	  let td6 = document.createElement("TD");
+      let input = document.createElement("p");
+	  let new_name = document.createElement("p");
+      let new_price = document.createElement("p");
+	  let new_quantity = document.createElement("p");
+	  let new_checkbox = document.createElement("input");
+	  tr.className="tablepr";
+	  new_name.className="tablepr";
+	  new_checkbox.className="form-check-input";
+	  new_checkbox.type="checkbox";
+	  new_checkbox.role="switch";
+	  new_checkbox.id="flexSwitchCheckDefault";
+	  		inputs++;						
+	  new_checkbox.onclick=function() {
+	  	  if (new_checkbox.checked){
+		x[inputs]=price2*quantity2;
+		  sum=sum+x[inputs];
+	  }
+	  else{
+		  x[inputs]=price2*quantity2;
+		  sum=sum-x[inputs];
+	  }
+	  }
+	  
+      if (inputs > 0) {
+        let new_yd = document.createElement('button');
+		new_yd.className="custom-btn btn-15";
+		new_yd.textContent="Удалить";
+        new_yd.onclick = function () {
+			removeContact(tr);
+			if (new_checkbox.checked){
+				x[inputs]=price2*quantity2;
+				sum=sum-x[inputs];
+			}
+        }
+        td5.appendChild(new_yd);
+      }
+	  if(sum<0){
+	  sum=0;
+	  }
+      input.textContent =inputs;	
+	  new_name.textContent=name.value;
+      new_price.textContent = price2;
+	  new_quantity.textContent =q;
+      table.appendChild(tr);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+	  tr.appendChild(td4);
+	  tr.appendChild(td5);
+	  tr.appendChild(td6);
+      td1.appendChild(input);
+      td2.appendChild(new_name);
+	  td3.appendChild(new_price);
+	  td4.appendChild(new_quantity);
+	  td6.appendChild(new_checkbox);
+    }
+
+    function removeContact(tr) {
+      tr.parentNode.removeChild(tr);
+    }
+	 var sum=0;
+	  function sumsum() {
+  	  var price1=document.getElementById("two").value;
+	  var quantity1=document.getElementById("three").value;
+	  var price2=parseInt(price1)
+	  var quantity2=parseInt(quantity1);
+	  var x=price2*quantity2;
+	  alert(sum+" руб");
+	  }
+  </script>
+</head>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<div class="table1">
+ <table>
+    <tbody id="contacts">
+      <tr>
+        <td>Наименование<br><input id="one" placeholder="Введите наиминование товара"></td>
+        <td id="sum">Стоимость(1 шт)<br><input id="two" placeholder="Введите стоимость товара"></td>
+		<td>Количество<br><input  id="three" placeholder="Введите количество товара"></td>
+        <td></td>
+      </tr>
+	   <tr>
+        <td colspan="5">
+		<div class="button">
+          <button class="custom-btn1 btn-1" onclick="javascript:addContact();">Добавить товар в корзину</button>
+		</div>
+       </td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Наименование</th>
+      <th scope="col">Стоимость(1 шт)</th>
+      <th scope="col">Количество</th>
+	  <th scope="col">Удаление</th>
+    </tr>
+  </thead>
+  <tbody id="zak">
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+<div class="button1">
+ <button class="custom-btn btn-5" onclick="javascript:sumsum();">Стоимость</button>
+</div>
+</body>
+
+</html>
